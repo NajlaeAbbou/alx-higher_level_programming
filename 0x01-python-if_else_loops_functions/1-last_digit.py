@@ -10,4 +10,4 @@ elif digit == 0:
     show = "and is 0"
 else:
     show = "and is less than 6 and not 0"
-print("Last digit of",number,"is",digit,show)
+print("Last digit of", number, "is", digit, show)
