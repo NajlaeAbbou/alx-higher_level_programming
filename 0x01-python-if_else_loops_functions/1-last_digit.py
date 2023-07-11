@@ -2,7 +2,7 @@
 import random
 number = random.randint(-10000, 10000)
 digit = abs(number) % 10
-if digit > 5:
+if number > 0 and digit > 5:
     show = "and is greater than 5"
 elif digit == 0:
     show = "and is 0"
