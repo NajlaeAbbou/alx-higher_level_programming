@@ -18,7 +18,10 @@ elif operator == '-':
 elif operator == '*':
     result = mul(a, b)
 elif operator == '/':
-    result = div(a, b)
+    if b !=0:
+        result = div(a, b)
+    else:
+        result == 0
 else:
     print("Unknown operator. Available operators: +, -, * and /")
     sys.exit(1)
