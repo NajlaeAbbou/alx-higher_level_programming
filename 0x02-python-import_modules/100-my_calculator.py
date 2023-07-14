@@ -20,7 +20,8 @@ if __name__ == "__main__":
     elif operator == '/':
         if b != 0:
             result = div(a, b)
-        else:result == 0
+        else:
+            result == 0
     else:
         print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
