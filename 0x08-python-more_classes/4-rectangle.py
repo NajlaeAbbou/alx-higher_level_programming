@@ -55,6 +55,6 @@ class Rectangle:
                 string.append("\n")
         return ("".join(string))
 
-     def __repr__(self):
+    def __repr__(self):
         """returns a string for reproduction"""
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
