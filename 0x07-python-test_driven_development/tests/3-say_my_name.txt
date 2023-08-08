@@ -1,0 +1,56 @@
+The ``3-say_my_name`` module
+======================
+
+Using ``say_my_name``
+-------------------
+
+Importing the function from the module:
+	>>> say_my_name = __import__("3-say_my_name").say_my_name
+
+Checking for module docstring:
+	 >>> m = __import__("3-say_my_name").__doc__
+	 >>> len(m) > 1
+	 True
+
+Checking for function docstring:
+	 >>> f = __import__("3-say_my_name").say_my_name.__doc__
+         >>> len(f) > 1
+         True
+
+Checking for passing None as first name:
+	 >>> say_my_name(None, "Hadj Abbou")
+	 Traceback (most recent call last):
+         ...
+         TypeError: first_name must be a string
+
+Checking for passing None as last name:
+	 >>> say_my_name("Najlae", None)
+	 Traceback (most recent call last):
+         ...
+         TypeError: last_name must be a string
+
+Checking for wrong type as first name:
+         >>> say_my_name(2, "hadj Abbou")
+         Traceback (most recent call last):
+         ...
+         TypeError: first_name must be a string
+
+Checking for wrong type as last name:
+         >>> say_my_name("najlae", [2])
+         Traceback (most recent call last):
+         ...
+         TypeError: last_name must be a string
+
+Checking for normal use:
+	 >>> say_my_name("najlae", "hadj abbou")
+	 My name is najlae hadj abbou
+
+Checking for 1 arg:
+         >>> say_my_name("najlae")
+         My name is najlae 
+
+Checking for more than 2 args:
+         >>> say_my_name("najlae", "hadj abbou", "hi")
+         Traceback (most recent call last):
+         ...
+         TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
