@@ -54,7 +54,7 @@ class Rectangle:
             if i != self.__height - 1:
                 string.append("\n")
         return ("".join(string))
-    
+
     def __repr__(self):
         """returns for reproduction"""
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
