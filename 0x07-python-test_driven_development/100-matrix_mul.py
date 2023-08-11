@@ -46,7 +46,7 @@ def matrix_mul(m_a, m_b):
             if type(co) != int and type(co) != float:
                 raise TypeError("m_b should contain only integers or floats")
 
-    if col! = row:
+    if col != row:
         raise ValueError("m_a and m_b can't be multiplied")
 
     matrix_1 = []
