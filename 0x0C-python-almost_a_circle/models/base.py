@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""base model class"""
+"""base model class."""
 import json
 import csv
 import turtle
@@ -7,6 +7,7 @@ import turtle
 
 class Base:
     """Base model representation
+
     Args:
         __nb_object (int): Number of inst Bases
     """
@@ -97,7 +98,7 @@ class Base:
                 else:
                     field_names = ["id", "size", "x", "y"]
                 list_dicts = csv.DictReader(csvfile, fieldnames=field_names)
-                list_dicts = [dict([key, int(value)] for key, value in dic.items())
+                list_dicts = [dict([k, int(v)] for k, v in dic.items())
                               for dic in list_dicts]
                 return [cls.create(**dic) for dic in list_dicts]
         except IOError:
